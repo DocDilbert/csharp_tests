@@ -1,13 +1,5 @@
 ﻿using System;
 
-class A
-{
-  public
-  A() {
-
-  }
-}
-
 interface IB {
   void execute();
 }
@@ -33,6 +25,7 @@ internal class Program
         var blabla = new A();
         var B = new B(blabla);
         B b;
+        blabla.Execute();
 
     }
 }

@@ -6,7 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NLog" Version="5.1.1" />
+    <PackageReference Include="NLog" Version="5.1.1"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2"/>
   </ItemGroup>
   <ItemGroup>
     <None Update="NLog.config">
