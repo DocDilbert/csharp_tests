@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using CommandLine;
 
 interface IB
@@ -44,6 +45,19 @@ namespace QuickStart
 
     static void Main(string[] args)
     {
+
+      var config = new NLog.Config.LoggingConfiguration();
+
+      // Targets where to log to: File and Console
+      
+      var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+
+      // Rules for mapping loggers to targets 
+      Logger.Trace("TRACE 1");           
+      config.AddRule(NLog.LogLevel.Trace, NLog.LogLevel.Fatal, logconsole);
+      // Apply config           
+NLog.LogManager.Configuration = config;
+      Logger.Trace("TRACE 2");        
       Logger.Info("Hello wojjjrld");
       Console.WriteLine("Hello, World!");
       var blabla = new A();
